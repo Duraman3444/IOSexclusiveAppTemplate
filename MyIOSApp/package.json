@@ -1,0 +1,49 @@
+{
+  "name": "myiosapp",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --ios",
+    "ios": "expo run:ios",
+    "ios:device": "expo run:ios --device",
+    "ios:simulator": "expo run:ios --simulator",
+    "build:ios": "eas build --platform ios",
+    "build:ios:development": "eas build --platform ios --profile development",
+    "build:ios:preview": "eas build --platform ios --profile preview",
+    "build:ios:production": "eas build --platform ios --profile production",
+    "submit:ios": "eas submit --platform ios",
+    "prebuild": "expo prebuild --platform ios",
+    "clean": "expo prebuild --clean --platform ios",
+    "update-docs": "./update-docs.sh",
+    "docs:check": "echo 'Last documentation update:' && cat docs/generated/last_update.log | head -5 2>/dev/null || echo 'No update log found. Run npm run update-docs first.'",
+    "docs:stats": "echo 'Documentation Statistics:' && find docs -name '*.md' -type f | wc -l | xargs echo 'Markdown files:' && du -sh docs/ | cut -f1 | xargs echo 'Total size:'"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^7.1.14",
+    "@react-navigation/native-stack": "^7.3.21",
+    "@react-navigation/bottom-tabs": "^7.2.0",
+    "@supabase/supabase-js": "^2.50.5",
+    "@tanstack/react-query": "^5.83.0",
+    "expo": "~53.0.17",
+    "expo-status-bar": "~2.2.3",
+    "expo-haptics": "~14.0.1",
+    "expo-blur": "~14.0.1",
+    "expo-constants": "~17.0.3",
+    "expo-device": "~7.0.1",
+    "expo-screen-orientation": "~8.0.0",
+    "nativewind": "^4.1.23",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-screens": "^4.11.1",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/node": "^24.0.13",
+    "@types/react": "~19.0.10",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.8.3"
+  },
+  "private": true
+}

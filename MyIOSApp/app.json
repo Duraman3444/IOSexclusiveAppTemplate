@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "MyIOSApp",
+    "slug": "MyIOSApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "platforms": ["ios"],
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.myiosapp",
+      "buildNumber": "1",
+      "requireFullScreen": false,
+      "userInterfaceStyle": "automatic",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleLocalizations": ["en"],
+        "NSCameraUsageDescription": "This app needs access to camera to take photos",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to select images",
+        "NSMicrophoneUsageDescription": "This app needs access to microphone to record audio",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location to provide location-based features"
+      }
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  }
+}
